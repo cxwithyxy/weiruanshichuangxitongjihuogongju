@@ -1,3 +1,5 @@
+#coding:utf-8
+
 from distutils.core import setup
 import py2exe
 
@@ -14,5 +16,8 @@ setup(
     },
     data_files = [("",["./../cacert.pem"])],
     zipfile = None,
-    console = [{"script": "./../index.py"}]
+    console = [{"script": "./../index.py"}],
+    version = "0.0.1",
+    description = u"微软视窗系统激活工具",
+    name = "weiruanshichuangxitongjihuogongju"
 )
