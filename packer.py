@@ -7,9 +7,12 @@ setup(
     options = { 
         "py2exe": { 
             "dll_excludes": ["MSVCP90.dll"], 
-            "bundle_files": 1
+            "bundle_files": 1,
+            "compressed": 1,
+            "optimize": 2
         }
     },
+    data_files = [("",["./../cacert.pem"])],
     zipfile = None,
     console = [{"script": "./../index.py"}]
 )
