@@ -1,3 +1,4 @@
+#coding:utf-8
 
 from lib.Singleton import *
 import lib.NetGeter as NetGeter
