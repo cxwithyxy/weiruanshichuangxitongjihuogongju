@@ -26,17 +26,13 @@ print u"获取注册服务器..."
 server_ip = Server().get_default_server()
 print u"适配注册服务器为: " + server_ip
 
-# slmgr /upk
-# slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx（激活密匙）
-# slmgr /skms kms.xspace.in
-# slmgr /ato
 print u"卸载系统已经存在的注册码"
-runCmd("slmgr /upk")
+runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /upk")
 print u"把注册码 " + reg_code + u" 写入系统"
-runCmd("slmgr /ipk " + reg_code)
+runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /ipk " + reg_code)
 print u"设置注册服务器"
-runCmd("slmgr /skms " + server_ip)
+runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /skms " + server_ip)
 
 print u"进行注册"
-runCmd("slmgr /ato")
+runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /ato")
 print u"注册完毕"
