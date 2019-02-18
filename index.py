@@ -36,3 +36,5 @@ runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /skms " + server_ip)
 print u"进行注册"
 runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /ato")
 print u"注册完毕"
+
+raw_input(u"按下回车键结束运行")
