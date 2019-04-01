@@ -5,6 +5,8 @@ from workThreading.regWin import RegWin
 import tkinter
 
 mainW = tkinter.Tk()
+mainW.title("系统激活")
+
 t = tkinter.Text()
 
 t.pack()
