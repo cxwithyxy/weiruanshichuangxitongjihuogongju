@@ -3,15 +3,14 @@
 from lib.Singleton import *
 import os
 import re
-import subprocess
+import lib.myCmd as mycmd
 
 class Systeminfo(Singleton):
     
     info_text = ""
     
     def __Singleton_Init__(self):
-        (result, output) = subprocess.getstatusoutput('systeminfo')
-        self.info_text = output
+        self.info_text = mycmd.run_cmd("systeminfo")
 
     def get_windows_version_name(self):
         matchObj = re.search( u'OS 名称.*$', self.info_text, re.M)

@@ -12,7 +12,7 @@ t = tkinter.Text()
 t.pack()
 
 def word_show(word):
-    t.insert(tkinter.END, word + "\n")
+    t.insert(tkinter.END, word + "\n\n")
 
 RegWin(word_show).thread_do_reg()
 

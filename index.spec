@@ -4,6 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['index.py'],
+             pathex=['M:\\weiruanshichuangxitongjihuogongju'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -26,6 +27,6 @@ exe = EXE(pyz,
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
-          upx=True,
+          upx=False,
           runtime_tmpdir=None,
           console=True )
