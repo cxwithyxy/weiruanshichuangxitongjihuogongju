@@ -4,7 +4,6 @@ block_cipher = None
 
 
 a = Analysis(['index.py'],
-             pathex=['M:\\weiruanshichuangxitongjihuogongju'],
              binaries=[],
              datas=[],
              hiddenimports=[],
