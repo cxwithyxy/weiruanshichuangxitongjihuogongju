@@ -6,10 +6,11 @@ import tkinter
 
 mainW = tkinter.Tk()
 mainW.title("系统激活")
+mainW.geometry("400x600")
 
-t = tkinter.Text()
+t = tkinter.Text(mainW)
 
-t.pack()
+t.pack(fill = "both", expand = 1)
 
 def word_show(word):
     t.insert(tkinter.END, word + "\n\n")
