@@ -17,6 +17,11 @@ class RegWin(Singleton):
         self.output_func = output_func
         pass
 
+    def thread_do_reg(self):
+        t = threading.Thread(target=self.do_reg)
+        t.setDaemon(True)
+        t.start()
+
     def do_reg(self):
 
         def runCmd(cmd):
@@ -46,3 +51,4 @@ class RegWin(Singleton):
         self.output_func( u"进行注册")
         runCmd("cscript //nologo c:/Windows/System32/slmgr.vbs /ato")
         self.output_func( u"注册完毕")
+        self.output_func( u"您可以关闭该程序了")

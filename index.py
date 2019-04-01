@@ -12,6 +12,6 @@ t.pack()
 def word_show(word):
     t.insert(tkinter.END, word + "\n")
 
-RegWin(word_show).do_reg()
+RegWin(word_show).thread_do_reg()
 
 mainW.mainloop()
